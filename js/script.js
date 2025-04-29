@@ -15,6 +15,21 @@ const codiceCPElem = document.getElementById("CpCode");
 const costoBigliettoElem = document.getElementById("ticketPrice");
 
 
+annullaInput.addEventListener("click", function resetForm(event){
+    // Impedisce il comportamento di default del pulsante di reset
+    event.preventDefault();
+
+    // Resetta i campi di input
+    nomeInput.value = "";
+    kmInput.value = "";
+    anniInput.value = "2"; // Opzione di default (Maggiorenne)
+
+    // Resetta i dettagli del biglietto visualizzati
+    nomePasseggeroElem.innerHTML = " ";
+    carrozzaElem.innerHTML = " ";
+    codiceCPElem.innerHTML = " ";
+    costoBigliettoElem.innerHTML = " ";
+});
 
 inviaInput.addEventListener("click", function formSender(event){
     event.preventDefault();
